@@ -1,0 +1,28 @@
+:root {
+  --cor-branco: #ffffff;
+  --cor-preto: #111111;
+  --cor-vermelho: #e63946;
+  --cor-amarelo: #ffb703;
+  --cor-amarelo-hover: #ffca28;
+  --cor-cinza-claro: #f1f2f6;
+  --cor-cinza-borda: #e2e8f0;
+  --cor-cinza-texto: #64748b;
+  --cor-erro: #e63946;
+  --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --sombra-card: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --transicao: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  font-size: 16px;
+  overflow-x: hidden;
+}
