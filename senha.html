@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKGEFood - Login</title>
-    <link rel="stylesheet" href="styles/styles/style.css">
-    <script src="js/script.js" defer></script>
+    <title>AKGEFood - Recuperação de Senha</title>
+    <link rel="stylesheet" href="styles/styles/senha.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="container-principal">
             <section class="area-marca">
                 <div class="logo-container">
-                    <img src="img/logo.jpeg"
+                    <img src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=180&q=80"
                         alt="Logo AKGEFood" class="logo-imagem">
                 </div>
 
@@ -32,7 +32,7 @@
                     <span class="icone-ia-banner">✨</span>
                     <div class="ia-banner-textos">
                         <h3>IA AKGEFood</h3>
-                        <p>Encontre opções que combinam perfeitamente com você.</p>
+                        <p>Seu atendimento começa aqui.</p>
                     </div>
                 </div>
 
@@ -41,18 +41,23 @@
                         <span class="icone-detalhe">⚡</span> Entrega rápida e segura
                     </div>
                     <div class="item-detalhe">
-                        <span class="icone-detalhe">🎯</span> Recomendações sob medida
+                        <span class="icone-detalhe">🎯</span> Praticidade em cada clique
                     </div>
                 </div>
             </section>
 
             <section class="area-formulario">
                 <div class="cabecalho-form">
-                    <h2 class="titulo-form">Entre na sua conta</h2>
-                    <p class="subtitulo-form">Acesse sua conta para continuar seu pedido.</p>
+                    <h2 class="titulo-form">Recupere sua senha</h2>
+                    <p class="subtitulo-form">Digite seus dados abaixo e enviaremos as instruções para você recuperar o
+                        acesso à sua conta.</p>
                 </div>
 
-                <form id="formulario-login" novalidate>
+                <div id="mensagem-sucesso" class="mensagem-sucesso-container">
+                    <p class="mensagem-sucesso-texto">Enviamos as instruções para recuperação da sua senha.</p>
+                </div>
+
+                <form id="formulario-recuperacao" novalidate>
                     <div class="grupo-input">
                         <label class="rotulo-campo" for="email">E-mail ou telefone</label>
                         <div class="input-wrapper">
@@ -64,41 +69,14 @@
                             válido.</span>
                     </div>
 
-                    <div class="grupo-input">
-                        <label class="rotulo-campo" for="senha">Senha</label>
-                        <div class="input-wrapper">
-                            <span class="icone-input">🔒</span>
-                            <input type="password" id="senha" class="campo-texto" placeholder="Sua senha secreta"
-                                autocomplete="current-password">
-                            <button type="button" id="botao-toggle-senha" class="botao-senha-toggle">👁️</button>
-                        </div>
-                        <span class="mensagem-erro" id-erro="senha">A senha deve ter pelo menos 6 caracteres.</span>
-                    </div>
-
-                    <div class="grupo-opcoes">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="lembrar">
-                            <span class="checkmark"></span>
-                            Lembrar de mim
-                        </label>
-                        <a href="senha.html" id="link-esqueci" class="link-esqueci">Esqueci minha senha</a>
-                    </div>
-
                     <button type="submit" id="botao-entrar" class="botao-entrar">
-                        <span id="texto-botao-entrar">Entrar</span>
+                        <span id="texto-botao-entrar">Enviar código</span>
                         <div id="spinner-carregamento" class="spinner"></div>
                     </button>
                 </form>
 
-                <div class="separador-ou">ou</div>
-
-                <button type="button" id="botao-criar-conta" class="botao-criar-conta">
-                    <span>👤</span> Criar uma conta
-                </button>
-
                 <div class="rodape-form">
-                    <p>Ainda não possui uma conta? <a href="#" id="link-cadastro" class="link-cadastro">Cadastre-se</a>
-                    </p>
+                    <p><a href="index.html" id="link-voltar" class="link-voltar">Voltar para o login</a></p>
                 </div>
             </section>
         </div>
