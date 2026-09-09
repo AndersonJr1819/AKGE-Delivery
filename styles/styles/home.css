@@ -1,0 +1,741 @@
+@import url(../global.css);
+
+.pagina-home {
+  width: 1280px;
+  min-height: 900px;
+  margin: 0 auto;
+  background-color: var(--cor-branco);
+  padding: 32px;
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.header-principal {
+  width: 1216px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.header-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.botao-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--cor-preto);
+}
+
+.logo-imagem {
+  width: 160px;
+  height: 50px;
+  background-color: var(--cor-cinza-claro);
+  border-radius: 8px;
+  display: block;
+}
+
+.header-direita {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.localizacao-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.icone-localizacao {
+  font-size: 20px;
+  color: var(--cor-vermelho);
+}
+
+.localizacao-texto span {
+  font-size: 12px;
+  color: var(--cor-cinza-texto);
+  display: block;
+}
+
+.localizacao-texto strong {
+  font-size: 14px;
+  color: var(--cor-preto);
+}
+
+.carrinho-container {
+  position: relative;
+  background-color: var(--cor-cinza-claro);
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.carrinho-container:hover {
+  background-color: var(--cor-cinza-borda);
+}
+
+.icone-carrinho {
+  font-size: 20px;
+}
+
+.badge-carrinho {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: var(--cor-vermelho);
+  color: var(--cor-branco);
+  font-size: 11px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-pesquisa-container {
+  width: 1216px;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.icone-pesquisa {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  font-size: 18px;
+  color: var(--cor-cinza-texto);
+}
+
+.campo-pesquisa {
+  width: 1216px;
+  height: 56px;
+  padding: 0 20px 0 52px;
+  background-color: var(--cor-cinza-claro);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 28px;
+  font-size: 15px;
+  color: var(--cor-preto);
+  outline: none;
+  transition: var(--transicao);
+}
+
+.campo-pesquisa:focus {
+  border-color: var(--cor-amarelo);
+  background-color: var(--cor-branco);
+  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.15);
+}
+
+.secao-categorias {
+  width: 1216px;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.card-categoria {
+  min-width: 148px;
+  height: 96px;
+  background-color: var(--cor-cinza-claro);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.card-categoria:hover,
+.card-categoria.ativo {
+  background-color: var(--cor-amarelo);
+  border-color: var(--cor-amarelo);
+  transform: translateY(-2px);
+}
+
+.icone-categoria {
+  font-size: 24px;
+}
+
+.nome-categoria {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cor-preto);
+}
+
+.banner-principal {
+  width: 1216px;
+  height: 340px;
+  background-color: var(--cor-preto);
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-conteudo {
+  width: 560px;
+  z-index: 2;
+}
+
+.banner-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cor-amarelo);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.banner-titulo {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--cor-branco);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.banner-descricao {
+  font-size: 15px;
+  color: var(--cor-cinza-borda);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.botao-banner {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-preto);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.botao-banner:hover {
+  background-color: var(--cor-amarelo-hover);
+  transform: translateY(-2px);
+}
+
+.banner-imagem-wrapper {
+  width: 440px;
+  height: 260px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.banner-imagem {
+  width: 440px;
+  height: 260px;
+  background-color: var(--cor-cinza-borda);
+  display: block;
+}
+
+.selo-ia-banner {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: rgba(17, 17, 17, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selo-ia-icone {
+  font-size: 18px;
+}
+
+.selo-ia-textos strong {
+  font-size: 12px;
+  color: var(--cor-amarelo);
+  display: block;
+}
+
+.selo-ia-textos span {
+  font-size: 11px;
+  color: var(--cor-branco);
+}
+
+.secao-ia-interativa {
+  width: 1216px;
+  background-color: var(--cor-cinza-claro);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 48px;
+  display: none;
+}
+
+.secao-ia-interativa.ativo {
+  display: block;
+}
+
+.ia-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ia-icone-titulo {
+  font-size: 24px;
+}
+
+.ia-cabecalho h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cor-preto);
+}
+
+.ia-descricao {
+  font-size: 14px;
+  color: var(--cor-cinza-texto);
+  margin-bottom: 20px;
+}
+
+.ia-chat-box {
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 80px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--cor-preto);
+}
+
+.ia-input-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.ia-campo {
+  flex: 1;
+  height: 48px;
+  padding: 0 16px;
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.ia-botao-enviar {
+  background-color: var(--cor-vermelho);
+  color: var(--cor-branco);
+  border: none;
+  padding: 0 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.ia-botao-enviar:hover {
+  opacity: 0.9;
+}
+
+.cabecalho-secao {
+  width: 1216px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.titulo-secao {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--cor-preto);
+}
+
+.link-ver-todos {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cor-vermelho);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-ver-todos:hover {
+  text-decoration: underline;
+}
+
+.grade-restaurantes {
+  width: 1216px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.card-restaurante {
+  width: 388px;
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--sombra-suave);
+  transition: var(--transicao);
+  position: relative;
+}
+
+.card-restaurante:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-card);
+}
+
+.imagem-restaurante-wrapper {
+  width: 388px;
+  height: 180px;
+  position: relative;
+}
+
+.imagem-restaurante {
+  width: 388px;
+  height: 180px;
+  background-color: var(--cor-cinza-claro);
+  display: block;
+}
+
+.botao-favorito {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: var(--transicao);
+}
+
+.botao-favorito:hover {
+  transform: scale(1.1);
+}
+
+.botao-favorito.ativo {
+  color: var(--cor-vermelho);
+}
+
+.info-restaurante {
+  padding: 16px;
+}
+
+.nome-restaurante {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cor-preto);
+  margin-bottom: 8px;
+}
+
+.detalhes-restaurante {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--cor-cinza-texto);
+  margin-bottom: 8px;
+}
+
+.avaliacao {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.categoria-restaurante {
+  font-size: 13px;
+  color: var(--cor-cinza-texto);
+}
+
+.banner-ofertas {
+  width: 1216px;
+  background-color: var(--cor-amarelo);
+  border-radius: 20px;
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.ofertas-textos h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--cor-preto);
+  margin-bottom: 6px;
+}
+
+.ofertas-textos p {
+  font-size: 14px;
+  color: var(--cor-preto);
+}
+
+.botao-ofertas {
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.botao-ofertas:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.botao-ia-flutuante {
+  position: fixed;
+  bottom: 96px;
+  right: 32px;
+  background-color: var(--cor-vermelho);
+  color: var(--cor-branco);
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: var(--transicao);
+}
+
+.botao-ia-flutuante:hover {
+  transform: scale(1.05);
+}
+
+.painel-ia-flutuante {
+  position: fixed;
+  bottom: 164px;
+  right: 32px;
+  width: 360px;
+  background-color: var(--cor-branco);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 20px;
+  box-shadow: var(--sombra-card);
+  padding: 24px;
+  display: none;
+  z-index: 100;
+}
+
+.painel-ia-flutuante.ativo {
+  display: block;
+}
+
+.painel-ia-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.painel-ia-topo h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cor-preto);
+}
+
+.botao-fechar-ia {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--cor-cinza-texto);
+}
+
+.painel-ia-corpo {
+  background-color: var(--cor-cinza-claro);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+  color: var(--cor-preto);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.painel-ia-input-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.painel-ia-campo {
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  background-color: var(--cor-cinza-claro);
+  border: 1px solid var(--cor-cinza-borda);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+}
+
+.painel-ia-enviar {
+  background-color: var(--cor-amarelo);
+  color: var(--cor-preto);
+  border: none;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navegacao-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background-color: var(--cor-branco);
+  border-top: 1px solid var(--cor-cinza-borda);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-cinza-texto);
+  font-size: 12px;
+  font-weight: 600;
+  transition: var(--transicao);
+}
+
+.nav-item.ativo {
+  color: var(--cor-amarelo);
+}
+
+.nav-icone {
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .pagina-home {
+    width: 768px;
+    padding: 20px;
+  }
+
+  .header-principal,
+  .barra-pesquisa-container,
+  .campo-pesquisa,
+  .secao-categorias,
+  .banner-principal,
+  .secao-ia-interativa,
+  .cabecalho-secao,
+  .grade-restaurantes,
+  .banner-ofertas {
+    width: 728px;
+  }
+
+  .banner-principal {
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .banner-conteudo {
+    width: 100%;
+  }
+
+  .banner-imagem-wrapper,
+  .banner-imagem {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-restaurante,
+  .imagem-restaurante-wrapper,
+  .imagem-restaurante {
+    width: 352px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagina-home {
+    width: 480px;
+    padding: 12px;
+  }
+
+  .header-principal,
+  .barra-pesquisa-container,
+  .campo-pesquisa,
+  .secao-categorias,
+  .banner-principal,
+  .secao-ia-interativa,
+  .cabecalho-secao,
+  .grade-restaurantes,
+  .banner-ofertas {
+    width: 456px;
+  }
+
+  .header-direita {
+    gap: 12px;
+  }
+
+  .localizacao-texto {
+    display: none;
+  }
+
+  .card-restaurante,
+  .imagem-restaurante-wrapper,
+  .imagem-restaurante {
+    width: 456px;
+  }
+
+  .banner-principal {
+    padding: 20px;
+  }
+
+  .banner-titulo {
+    font-size: 28px;
+  }
+}

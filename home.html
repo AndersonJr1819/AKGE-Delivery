@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKGEFood - Home</title>
+    <link rel="stylesheet" href="styles/styles/home.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="pagina-home">
+        <header class="header-principal">
+            <div class="header-esquerda">
+                <button id="botao-menu" class="botao-menu">☰</button>
+                <div class="logo-container">
+                    <img src="img/logo.jpeg" alt="Logo AKGEFood" class="logo-imagem">
+                </div>
+            </div>
+            <div class="header-direita">
+                <div class="localizacao-container">
+                    <span class="icone-localizacao">📍</span>
+                    <div class="localizacao-texto">
+                        <span>Entregar em</span>
+                        <strong>Rua das Acácias, 123</strong>
+                    </div>
+                </div>
+                <div class="carrinho-container">
+                    <span class="icone-carrinho">🛒</span>
+                    <span class="badge-carrinho">2</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="barra-pesquisa-container">
+            <span class="icone-pesquisa">🔍</span>
+            <input type="text" id="campo-pesquisa" class="campo-pesquisa"
+                placeholder="Busque por restaurantes, pratos ou categorias...">
+        </div>
+
+        <section class="secao-categorias">
+            <div class="card-categoria ativo" data-categoria="Hambúrguer">
+                <span class="icone-categoria">🍔</span>
+                <span class="nome-categoria">Hambúrguer</span>
+            </div>
+            <div class="card-categoria" data-categoria="Pizza">
+                <span class="icone-categoria">🍕</span>
+                <span class="nome-categoria">Pizza</span>
+            </div>
+            <div class="card-categoria" data-categoria="Sushi">
+                <span class="icone-categoria">🍣</span>
+                <span class="nome-categoria">Sushi</span>
+            </div>
+            <div class="card-categoria" data-categoria="Marmitas">
+                <span class="icone-categoria">🍱</span>
+                <span class="nome-categoria">Marmitas</span>
+            </div>
+            <div class="card-categoria" data-categoria="Frango">
+                <span class="icone-categoria">🍗</span>
+                <span class="nome-categoria">Frango</span>
+            </div>
+            <div class="card-categoria" data-categoria="Bebidas">
+                <span class="icone-categoria">🥤</span>
+                <span class="nome-categoria">Bebidas</span>
+            </div>
+            <div class="card-categoria" data-categoria="Promoções">
+                <span class="icone-categoria">⭐</span>
+                <span class="nome-categoria">Promoções</span>
+            </div>
+        </section>
+
+        <section class="banner-principal">
+            <div class="banner-conteudo">
+                <span class="banner-tag">Sabor e praticidade</span>
+                <h1 class="banner-titulo">Seu pedido, do seu jeito.</h1>
+                <p class="banner-descricao">Use a IA do AKGEFood para descobrir novos sabores, receber recomendações
+                    personalizadas e encontrar opções que combinam com você.</p>
+                <button id="botao-ver-recomendacoes" class="botao-banner">Ver recomendações →</button>
+            </div>
+            <div class="banner-imagem-wrapper">
+                <img src="img/hamburguer.jpeg" alt="Banner do AKGEFood" class="banner-imagem">
+                <div class="selo-ia-banner">
+                    <span class="selo-ia-icone">✨</span>
+                    <div class="selo-ia-textos">
+                        <strong>Com IA</strong>
+                        <span>Recomendações personalizadas para você.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao-ia-interativa" class="secao-ia-interativa">
+            <div class="ia-cabecalho">
+                <span class="ia-icone-titulo">✨</span>
+                <h3>Recomendações com IA</h3>
+            </div>
+            <p class="ia-descricao">Conte o que você está procurando e deixe a IA encontrar opções que combinam com
+                você.</p>
+            <div id="ia-chat-box" class="ia-chat-box">
+                Olá! Sou a IA do AKGEFood. O que você está procurando hoje?
+            </div>
+            <div class="ia-input-wrapper">
+                <input type="text" id="ia-campo-input" class="ia-campo"
+                    placeholder="Ex: Quero um hambúrguer com pouca gordura...">
+                <button id="ia-botao-enviar" class="ia-botao-enviar">Recomendar</button>
+            </div>
+        </section>
+
+        <div class="cabecalho-secao">
+            <h2 class="titulo-secao">Restaurantes em destaque</h2>
+            <a class="link-ver-todos">Ver todos →</a>
+        </div>
+
+        <section class="grade-restaurantes" id="grade-restaurantes">
+            <div class="card-restaurante" data-nome="McDonald's" data-categoria="Hambúrguer">
+                <div class="imagem-restaurante-wrapper">
+                    <img src="img/MCdonald.jpg" alt="Imagem do restaurante" class="imagem-restaurante">
+                    <button class="botao-favorito">❤</button>
+                </div>
+                <div class="info-restaurante">
+                    <h3 class="nome-restaurante">McDonald's</h3>
+                    <div class="detalhes-restaurante">
+                        <span class="avaliacao">★ 4.8</span>
+                        <span>25 a 40 min</span>
+                    </div>
+                    <span class="categoria-restaurante">Hambúrguer</span>
+                </div>
+            </div>
+
+            <div class="card-restaurante" data-nome="Burger King" data-categoria="Hambúrguer">
+                <div class="imagem-restaurante-wrapper">
+                    <img src="img/Banner-Whopper-principal-m.jpg" alt="Imagem do restaurante" class="imagem-restaurante">
+                    <button class="botao-favorito">❤</button>
+                </div>
+                <div class="info-restaurante">
+                    <h3 class="nome-restaurante">Burger King</h3>
+                    <div class="detalhes-restaurante">
+                        <span class="avaliacao">★ 4.7</span>
+                        <span>30 a 45 min</span>
+                    </div>
+                    <span class="categoria-restaurante">Hambúrguer</span>
+                </div>
+            </div>
+
+            <div class="card-restaurante" data-nome="KFC" data-categoria="Frango">
+                <div class="imagem-restaurante-wrapper">
+                    <img src="img/kfc.webp" alt="Imagem do restaurante" class="imagem-restaurante">
+                    <button class="botao-favorito">❤</button>
+                </div>
+                <div class="info-restaurante">
+                    <h3 class="nome-restaurante">KFC</h3>
+                    <div class="detalhes-restaurante">
+                        <span class="avaliacao">★ 4.6</span>
+                        <span>30 a 50 min</span>
+                    </div>
+                    <span class="categoria-restaurante">Frango</span>
+                </div>
+            </div>
+
+            <div class="card-restaurante" data-nome="Subway" data-categoria="Lanches">
+                <div class="imagem-restaurante-wrapper">
+                    <img src="img/subway-lanca-sanduiche-com-frango-plant-based-da-planted-na-suica.jpg" alt="Imagem do restaurante" class="imagem-restaurante">
+                    <button class="botao-favorito">❤</button>
+                </div>
+                <div class="info-restaurante">
+                    <h3 class="nome-restaurante">Subway</h3>
+                    <div class="detalhes-restaurante">
+                        <span class="avaliacao">★ 4.7</span>
+                        <span>20 a 35 min</span>
+                    </div>
+                    <span class="categoria-restaurante">Lanches</span>
+                </div>
+            </div>
+
+            <div class="card-restaurante" data-nome="Pizza Hut" data-categoria="Pizza">
+                <div class="imagem-restaurante-wrapper">
+                    <img src="img/pizza.jpeg" alt="Imagem do restaurante" class="imagem-restaurante">
+                    <button class="botao-favorito">❤</button>
+                </div>
+                <div class="info-restaurante">
+                    <h3 class="nome-restaurante">Pizza Hut</h3>
+                    <div class="detalhes-restaurante">
+                        <span class="avaliacao">★ 4.6</span>
+                        <span>35 a 55 min</span>
+                    </div>
+                    <span class="categoria-restaurante">Pizza</span>
+                </div>
+            </div>
+
+            <div class="card-restaurante" data-nome="Domino's" data-categoria="Pizza">
+                <div class="imagem-restaurante-wrapper">
+                    <img src="img/dominos.jpeg" alt="Imagem do restaurante" class="imagem-restaurante">
+                    <button class="botao-favorito">❤</button>
+                </div>
+                <div class="info-restaurante">
+                    <h3 class="nome-restaurante">Domino's</h3>
+                    <div class="detalhes-restaurante">
+                        <span class="avaliacao">★ 4.7</span>
+                        <span>30 a 50 min</span>
+                    </div>
+                    <span class="categoria-restaurante">Pizza</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner-ofertas">
+            <div class="ofertas-textos">
+                <h3>Cupons e promoções exclusivas</h3>
+                <p>Economize ainda mais nos seus pedidos!</p>
+            </div>
+            <button class="botao-ofertas">Ver ofertas →</button>
+        </section>
+
+        <button id="botao-ia-flutuante" class="botao-ia-flutuante">✨</button>
+
+        <div id="painel-ia-flutuante" class="painel-ia-flutuante">
+            <div class="painel-ia-topo">
+                <h4>IA do AKGEFood</h4>
+                <button id="botao-fechar-ia" class="botao-fechar-ia">✕</button>
+            </div>
+            <div id="painel-ia-mensagem" class="painel-ia-corpo">
+                Olá! Posso ajudar você a encontrar um restaurante, prato ou promoção.
+            </div>
+            <div class="painel-ia-input-wrapper">
+                <input type="text" id="painel-ia-campo" class="painel-ia-campo"
+                    placeholder="Digite o que você deseja...">
+                <button id="painel-ia-enviar" class="painel-ia-enviar">Enviar</button>
+            </div>
+        </div>
+
+        <nav class="navegacao-inferior">
+            <button class="nav-item ativo">
+                <span class="nav-icone">🏠</span>
+                <span>Início</span>
+            </button>
+            <button class="nav-item">
+                <span class="nav-icone">🔍</span>
+                <span>Buscar</span>
+            </button>
+            <button class="nav-item">
+                <span class="nav-icone">📋</span>
+                <span>Pedidos</span>
+            </button>
+            <button class="nav-item">
+                <span class="nav-icone">❤</span>
+                <span>Favoritos</span>
+            </button>
+            <button class="nav-item">
+                <span class="nav-icone">👤</span>
+                <span>Perfil</span>
+            </button>
+        </nav>
+    </main>
+</body>
+
+</html>
