@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria POP - AKGEFood</title>
+    <title>AKGEFood - Oakberry</title>
+    <link rel="stylesheet" href="styles/styles/cardapiooakberry.css">
+    <script src="js/cardapiooakberry.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/styles/cardapiomcdonalds.css">
-    <script src="js/cardapiopizza.js" defer></script>
-    <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
-    <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
 </head>
 
 <body>
@@ -29,67 +27,74 @@
                     <li><a href="home.html" class="nav-link">Voltar</a></li>
                 </ul>
             </nav>
-
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Buscar prato, restaurante ou categoria...">
-            </div>
-
             <div class="header-actions">
-                <button class="cart-btn" aria-label="Carrinho de compras">
+                <button class="cart-btn" aria-label="Carrinho">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-badge">0</span>
                 </button>
-                <a href="#conta" class="account-link">
-                    <i class="fa-regular fa-user"></i>
-                    <span>Entrar</span>
+                <a href="#" class="account-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Conta</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="restaurant-page-main">
-        <div class="restaurant-hero-banner" style="background-image: url('img/restaurant-bg.jpg');">
+    <main>
+        <section class="restaurant-hero-banner" style="background-image: url('img/banner-oakberry.png');">
             <div class="container">
                 <div class="restaurant-profile-card">
                     <div class="restaurant-logo-wrapper">
-                        <img src="img/pizza_calabresa_e_mussarela_4389_600.jpg
-                        " alt="Pizzaria Top" class="restaurant-avatar">
+                        <img src="img/açai 3.jpeg" alt="Oakberry Logo" class="restaurant-avatar">
                     </div>
                     <div class="restaurant-profile-info">
-                        <h1>Pizzaria Top</h1>
-                        <p class="restaurant-category-tag">Pizzas • Massa Artesanal</p>
+                        <h1>Oakberry</h1>
+                        <p class="restaurant-category-tag">Açaí • Saudável • Sobremesas</p>
                         <div class="restaurant-meta-details">
-                            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
-                            <span class="time"><i class="fa-regular fa-clock"></i> 30-45 min</span>
-                            <span class="delivery-fee">Entrega R$ 5,00</span>
-                            <span class="min-order">Mín. R$ 30,00</span>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9 (500+ avaliações)</span>
+                            </div>
+                            <div class="time">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>25-35 min</span>
+                            </div>
+                            <div class="delivery-fee">
+                                <i class="fa-solid fa-motorcycle"></i>
+                                <span>Entrega R$ 5,99</span>
+                            </div>
+                            <div class="min-order">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Ped. mín. R$ 15,00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="container menu-container-layout">
-            <div class="menu-content-area">
-                <div class="menu-category-section" id="principais">
+            <div class="menu-sections-wrapper">
+
+                <div class="menu-category-section">
                     <h2 class="menu-category-title">PRINCIPAIS</h2>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card" data-id="pizza-especial" data-name="Pizza Especial"
-                            data-price="39.90">
+                        <div class="menu-item-card" data-id="item-acai-especial" data-name="Açaí Especial"
+                            data-price="22.90">
                             <div class="menu-item-img-wrapper">
-                                <img src="img/pizza.jpeg" alt="Pizza Especial" class="menu-item-img">
+                                <img src="img/açai 4.jpg" alt="Açaí Especial" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
-                                <h3>Pizza Especial</h3>
-                                <p>Pizza preparada com massa artesanal, queijo, molho de tomate e ingredientes
-                                    selecionados.</p>
+                                <div>
+                                    <h3>Açaí Especial</h3>
+                                    <p>Açaí cremoso servido com banana, morango e granola.</p>
+                                </div>
                                 <div class="menu-item-footer">
-                                    <span class="menu-item-price">R$ 39,90</span>
-                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <span class="menu-item-price">R$ 22,90</span>
+                                    <button class="btn-add-cart">Adicionar</button>
                                     <div class="quantity-control" style="display: none;">
                                         <button class="qty-btn decrease">-</button>
-                                        <span class="qty-value">0</span>
+                                        <span class="qty-value">1</span>
                                         <button class="qty-btn increase">+</button>
                                     </div>
                                 </div>
@@ -98,23 +103,26 @@
                     </div>
                 </div>
 
-                <div class="menu-category-section" id="bebidas">
+                <div class="menu-category-section">
                     <h2 class="menu-category-title">BEBIDAS</h2>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card" data-id="refrigerante-pizza" data-name="Refrigerante"
-                            data-price="6.00">
+                        <div class="menu-item-card" data-id="item-suco-natural" data-name="Suco Natural"
+                            data-price="9.00">
                             <div class="menu-item-img-wrapper">
-                                <img src="img/coca.webp" alt="Refrigerante" class="menu-item-img">
+                                <img src="img/83140-suco-de-laranja-e-maca-the-natural-one-300ml.20260722142208.jpg"
+                                    alt="Suco Natural" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
-                                <h3>Refrigerante</h3>
-                                <p>Refrigerante gelado para acompanhar sua pizza.</p>
+                                <div>
+                                    <h3>Suco Natural</h3>
+                                    <p>Suco natural de frutas preparado na hora.</p>
+                                </div>
                                 <div class="menu-item-footer">
-                                    <span class="menu-item-price">R$ 6,00</span>
-                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <span class="menu-item-price">R$ 9,00</span>
+                                    <button class="btn-add-cart">Adicionar</button>
                                     <div class="quantity-control" style="display: none;">
                                         <button class="qty-btn decrease">-</button>
-                                        <span class="qty-value">0</span>
+                                        <span class="qty-value">1</span>
                                         <button class="qty-btn increase">+</button>
                                     </div>
                                 </div>
@@ -123,22 +131,25 @@
                     </div>
                 </div>
 
-                <div class="menu-category-section" id="acompanhamentos">
+                <div class="menu-category-section">
                     <h2 class="menu-category-title">ACOMPANHAMENTOS</h2>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card" data-id="pao-de-alho" data-name="Pão de Alho" data-price="12.00">
+                        <div class="menu-item-card" data-id="item-granola-crocante" data-name="Granola Crocante"
+                            data-price="6.00">
                             <div class="menu-item-img-wrapper">
-                                <img src="img/pão de alho.jpeg" alt="Pão de Alho" class="menu-item-img">
+                                <img src="img/granola.jpeg" alt="Granola Crocante" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
-                                <h3>Pão de Alho</h3>
-                                <p>Pão de alho assado e temperado, perfeito para acompanhar sua pizza.</p>
+                                <div>
+                                    <h3>Granola Crocante</h3>
+                                    <p>Porção de granola crocante para complementar seu açaí.</p>
+                                </div>
                                 <div class="menu-item-footer">
-                                    <span class="menu-item-price">R$ 12,00</span>
-                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <span class="menu-item-price">R$ 6,00</span>
+                                    <button class="btn-add-cart">Adicionar</button>
                                     <div class="quantity-control" style="display: none;">
                                         <button class="qty-btn decrease">-</button>
-                                        <span class="qty-value">0</span>
+                                        <span class="qty-value">1</span>
                                         <button class="qty-btn increase">+</button>
                                     </div>
                                 </div>
@@ -147,22 +158,25 @@
                     </div>
                 </div>
 
-                <div class="menu-category-section" id="sobremesas">
+                <div class="menu-category-section">
                     <h2 class="menu-category-title">SOBREMESAS</h2>
                     <div class="menu-items-grid">
-                        <div class="menu-item-card" data-id="petit-gateau" data-name="Petit Gâteau" data-price="16.00">
+                        <div class="menu-item-card" data-id="item-creme-cupuacu" data-name="Creme de Cupuaçu"
+                            data-price="14.00">
                             <div class="menu-item-img-wrapper">
-                                <img src="img/petit gateu.jpeg" alt="Petit Gâteau" class="menu-item-img">
+                                <img src="img/cupuaço.jpeg" alt="Creme de Cupuaçu" class="menu-item-img">
                             </div>
                             <div class="menu-item-info">
-                                <h3>Petit Gâteau</h3>
-                                <p>Bolinho de chocolate quente servido com uma deliciosa cobertura.</p>
+                                <div>
+                                    <h3>Creme de Cupuaçu</h3>
+                                    <p>Creme gelado de cupuaçu com textura cremosa e sabor refrescante.</p>
+                                </div>
                                 <div class="menu-item-footer">
-                                    <span class="menu-item-price">R$ 16,00</span>
-                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <span class="menu-item-price">R$ 14,00</span>
+                                    <button class="btn-add-cart">Adicionar</button>
                                     <div class="quantity-control" style="display: none;">
                                         <button class="qty-btn decrease">-</button>
-                                        <span class="qty-value">0</span>
+                                        <span class="qty-value">1</span>
                                         <button class="qty-btn increase">+</button>
                                     </div>
                                 </div>
@@ -170,11 +184,14 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <aside class="cart-sidebar-wrapper">
+            <div class="cart-sidebar-wrapper">
                 <div class="cart-container-mock">
-                    <h3 class="box-subtitle"><i class="fa-solid fa-bag-shopping"></i> Seu Carrinho</h3>
+                    <h3 class="box-subtitle">
+                        <i class="fa-solid fa-cart-shopping"></i> Sua Sacola
+                    </h3>
                     <div class="cart-items-list">
                         <div class="cart-item-placeholder">
                             <span>Nenhum produto adicionado no momento</span>
@@ -187,28 +204,42 @@
                         </div>
                         <div class="summary-row">
                             <span>Taxa de entrega</span>
-                            <span>R$ 0,00</span>
+                            <span>R$ 5,99</span>
                         </div>
                         <div class="summary-row">
-                            <span>Doação Solidária</span>
+                            <span>Descontos</span>
                             <span>R$ 0,00</span>
                         </div>
                         <div class="summary-row total">
                             <span>Total</span>
-                            <span>R$ 0,00</span>
+                            <span>R$ 5,99</span>
                         </div>
                     </div>
                     <button class="btn-checkout"
-                        style="width: 100%; margin-top: 20px; padding: 12px; background-color: #ffb703; color: #000000; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;">Finalizar
+                        style="width: 100%; margin-top: 20px; background-color: var(--cor-amarelo, #ffb703); color: var(--cor-preto, #121212); border: none; padding: 12px; font-weight: 700; border-radius: 8px; cursor: pointer;">Finalizar
                         Pedido</button>
                 </div>
-            </aside>
+            </div>
         </div>
     </main>
 
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Seja um Parceiro</a>
+                <a href="#">Ajuda</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 AKGEFood. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
     <div class="ai-chat-widget">
-        <button class="ai-chat-toggle-btn" aria-label="Abrir Chat com IA">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <button class="ai-chat-toggle-btn">
+            <i class="fa-solid fa-robot"></i>
             <span>Assistente IA</span>
         </button>
         <div class="ai-chat-window" aria-hidden="true">
@@ -216,49 +247,30 @@
                 <div class="ai-chat-title-group">
                     <i class="fa-solid fa-robot"></i>
                     <div>
-                        <h3>AKGEFood Assistente</h3>
+                        <h3>AKGEFood AI</h3>
                         <p>Online para ajudar</p>
                     </div>
                 </div>
                 <div class="ai-chat-header-actions">
-                    <button class="ai-chat-clear-btn" title="Limpar chat"><i class="fa-solid fa-trash-can"></i></button>
-                    <button class="ai-chat-close-btn" title="Fechar chat"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="ai-chat-clear-btn" aria-label="Limpar chat"><i
+                            class="fa-solid fa-rotate-right"></i></button>
+                    <button class="ai-chat-close-btn" aria-label="Fechar chat"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="ai-chat-messages">
                 <div class="ai-message bot">
-                    <p>Olá! 👋 Sou a IA AKGEFood. Posso ajudar você a encontrar restaurantes, pratos, ofertas ou
-                        recomendar algo de acordo com o seu gosto.</p>
+                    <p>Olá! 👋 Sou a IA AKGEFood. Posso ajudar você a encontrar o melhor açaí ou refresco no Oakberry.
+                    </p>
                 </div>
             </div>
             <div class="ai-chat-input-area">
-                <input type="text" class="ai-chat-input" placeholder="Digite sua dúvida ou pedido...">
+                <input type="text" class="ai-chat-input" placeholder="Digite sua dúvida...">
                 <button class="ai-chat-send-btn" aria-label="Enviar mensagem"><i
                         class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <span class="brand-fallback" style="font-weight:800; font-size:24px; color:#ffffff;">AKGE<span
-                            style="color:#ffb703;">Food</span></span>
-                    <p>Sua plataforma de delivery moderna, rápida e inteligente.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#">Sobre nós</a>
-                    <a href="#">Trabalhe conosco</a>
-                    <a href="#">Termos de uso</a>
-                    <a href="#">Política de privacidade</a>
-                </div>
-                <div class="footer-copy">
-                    <p>&copy; 2026 AKGEFood Tecnologia S.A. Todos os direitos reservados.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 </body>
 
