@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gendai - AKGEFood</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles/cardapiodogendai.css">
+    <script src="js/cardapiodogendai.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="img/Logo.png" alt="AKGEFood" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="brand-fallback" style="display:none; font-weight:800; font-size:20px; color:#000000;">AKGE<span style="color:#e63946;">Food</span></span>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">Início</a></li>
+                    <li><a href="index.html#restaurantes" class="nav-link active">Restaurantes</a></li>
+                    <li><a href="index.html#ofertas" class="nav-link">Ofertas</a></li>
+                    <li><a href="index.html#pedidos" class="nav-link">Pedidos</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar prato, restaurante ou categoria...">
+            </div>
+
+            <div class="header-actions">
+                <button class="cart-btn" aria-label="Carrinho de compras">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+                <a href="#conta" class="account-link">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Entrar</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="restaurant-page-main">
+        <div class="restaurant-hero-banner" style="background-image: url('img/restaurant-bg.jpg');">
+            <div class="container">
+                <div class="restaurant-profile-card">
+                    <div class="restaurant-logo-wrapper">
+                        <img src="img/sushi.jpeg" alt="Sushi Prime" class="restaurant-avatar">
+                    </div>
+                    <div class="restaurant-profile-info">
+                        <h1>Sushi Prime</h1>
+                        <p class="restaurant-category-tag">Culinária Japonesa • Sushis e Satis</p>
+                        <div class="restaurant-meta-details">
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                            <span class="time"><i class="fa-regular fa-clock"></i> 35-50 min</span>
+                            <span class="delivery-fee">Entrega R$ 6,00</span>
+                            <span class="min-order">Mín. R$ 35,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container menu-container-layout">
+            <div class="menu-content-area">
+                <div class="menu-category-section" id="principais">
+                    <h2 class="menu-category-title">PRINCIPAIS</h2>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card" data-id="combinado-sushi" data-name="Combinado de Sushi" data-price="42.90">
+                            <div class="menu-item-img-wrapper">
+                                <img src="img/combinado.jpeg" alt="Combinado de Sushi" class="menu-item-img">
+                            </div>
+                            <div class="menu-item-info">
+                                <h3>Combinado de Sushi</h3>
+                                <p>Seleção especial de peças de sushi preparadas com ingredientes frescos e cuidadosamente selecionados.</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-price">R$ 42,90</span>
+                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <div class="quantity-control" style="display: none;">
+                                        <button class="qty-btn decrease">-</button>
+                                        <span class="qty-value">0</span>
+                                        <button class="qty-btn increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category-section" id="bebidas">
+                    <h2 class="menu-category-title">BEBIDAS</h2>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card" data-id="cha-gelado" data-name="Chá Gelado" data-price="7.00">
+                            <div class="menu-item-img-wrapper">
+                                <img src="img/chá.jpeg" alt="Chá Gelado" class="menu-item-img">
+                            </div>
+                            <div class="menu-item-info">
+                                <h3>Chá Gelado</h3>
+                                <p>Chá gelado refrescante para acompanhar sua refeição.</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-price">R$ 7,00</span>
+                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <div class="quantity-control" style="display: none;">
+                                        <button class="qty-btn decrease">-</button>
+                                        <span class="qty-value">0</span>
+                                        <button class="qty-btn increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category-section" id="acompanhamentos">
+                    <h2 class="menu-category-title">ACOMPANHAMENTOS</h2>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card" data-id="guioza" data-name="Guioza" data-price="18.00">
+                            <div class="menu-item-img-wrapper">
+                                <img src="img/guioza.jpeg" alt="Guioza" class="menu-item-img">
+                            </div>
+                            <div class="menu-item-info">
+                                <h3>Guioza</h3>
+                                <p>Porção de guiozas dourados e recheados, perfeitos para acompanhar o combinado.</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-price">R$ 18,00</span>
+                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <div class="quantity-control" style="display: none;">
+                                        <button class="qty-btn decrease">-</button>
+                                        <span class="qty-value">0</span>
+                                        <button class="qty-btn increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category-section" id="sobremesas">
+                    <h2 class="menu-category-title">SOBREMESAS</h2>
+                    <div class="menu-items-grid">
+                        <div class="menu-item-card" data-id="mochi" data-name="Mochi" data-price="14.00">
+                            <div class="menu-item-img-wrapper">
+                                <img src="img/mochi.jpeg" alt="Mochi" class="menu-item-img">
+                            </div>
+                            <div class="menu-item-info">
+                                <h3>Mochi</h3>
+                                <p>Tradicional sobremesa japonesa com massa macia e recheio cremoso.</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-price">R$ 14,00</span>
+                                    <button class="btn-add-cart">Adicionar ao carrinho</button>
+                                    <div class="quantity-control" style="display: none;">
+                                        <button class="qty-btn decrease">-</button>
+                                        <span class="qty-value">0</span>
+                                        <button class="qty-btn increase">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="cart-sidebar-wrapper">
+                <div class="cart-container-mock">
+                    <h3 class="box-subtitle"><i class="fa-solid fa-bag-shopping"></i> Seu Carrinho</h3>
+                    <div class="cart-items-list">
+                        <div class="cart-item-placeholder">
+                            <span>Nenhum produto adicionado no momento</span>
+                        </div>
+                    </div>
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>R$ 0,00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Taxa de entrega</span>
+                            <span>R$ 0,00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Doação Solidária</span>
+                            <span>R$ 0,00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>R$ 0,00</span>
+                        </div>
+                    </div>
+                    <button class="btn-checkout" style="width: 100%; margin-top: 20px; padding: 12px; background-color: #ffb703; color: #000000; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;">Finalizar Pedido</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div class="ai-chat-widget">
+        <button class="ai-chat-toggle-btn" aria-label="Abrir Chat com IA">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Assistente IA</span>
+        </button>
+        <div class="ai-chat-window" aria-hidden="true">
+            <div class="ai-chat-header">
+                <div class="ai-chat-title-group">
+                    <i class="fa-solid fa-robot"></i>
+                    <div>
+                        <h3>AKGEFood Assistente</h3>
+                        <p>Online para ajudar</p>
+                    </div>
+                </div>
+                <div class="ai-chat-header-actions">
+                    <button class="ai-chat-clear-btn" title="Limpar chat"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="ai-chat-close-btn" title="Fechar chat"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="ai-chat-messages">
+                <div class="ai-message bot">
+                    <p>Olá! 👋 Sou a IA AKGEFood. Posso ajudar você a encontrar restaurantes, pratos, ofertas ou recomendar algo de acordo com o seu gosto.</p>
+                </div>
+            </div>
+            <div class="ai-chat-input-area">
+                <input type="text" class="ai-chat-input" placeholder="Digite sua dúvida ou pedido...">
+                <button class="ai-chat-send-btn" aria-label="Enviar mensagem"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <span class="brand-fallback" style="font-weight:800; font-size:24px; color:#ffffff;">AKGE<span style="color:#ffb703;">Food</span></span>
+                    <p>Sua plataforma de delivery moderna, rápida e inteligente.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Trabalhe conosco</a>
+                    <a href="#">Termos de uso</a>
+                    <a href="#">Política de privacidade</a>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 AKGEFood Tecnologia S.A. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
