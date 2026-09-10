@@ -48,9 +48,11 @@ body {
     margin-bottom: 2.5rem;
 }
 
-.brand-logo:not([src=""]):not([src="#"]) {
-    filter: brightness(0) invert(1);
-}
+.brand-logo {
+    max-width: 150px; /* Defina o tamanho máximo que preferir */
+    height: auto;      /* Mantém a proporção original */
+    display: block;
+}  
 
 .brand-slogan {
     font-size: 3.2rem;

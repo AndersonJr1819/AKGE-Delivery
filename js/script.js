@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.getElementById('password');
     const togglePasswordBtn = document.getElementById('toggle-password');
     const eyeIcon = togglePasswordBtn.querySelector('.eye-icon');
+    const loginForm = document.querySelector('form'); // Seleciona o formulário
 
     togglePasswordBtn.addEventListener('click', () => {
         const isPassword = passwordInput.getAttribute('type') === 'password';
@@ -16,4 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
             togglePasswordBtn.setAttribute('aria-label', 'Mostrar senha');
         }
     });
+
+    // Adiciona o redirecionamento ao enviar o formulário
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita o recarregamento padrão se for uma simulação
+            window.location.href = 'home.html';
+        });
+    }
 });
