@@ -1,0 +1,344 @@
+@import url(../global.css);
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-cinza-claro);
+}
+
+.signup-container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    background-color: var(--cor-branco);
+}
+
+.signup-left {
+    background: linear-gradient(135deg, var(--cor-preto) 0%, var(--cor-cinza-escuro) 100%);
+    color: var(--cor-branco);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-left::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 183, 3, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.brand-container {
+    max-width: 480px;
+}
+
+.brand-logo {
+    height: 48px;
+    width: auto;
+    margin-bottom: 2.5rem;
+}
+
+.brand-logo:not([src=""]):not([src="#"]) {
+    filter: brightness(0) invert(1);
+}
+
+.brand-slogan {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.brand-slogan .highlight {
+    color: var(--cor-amarelo);
+    position: relative;
+    display: inline-block;
+}
+
+.brand-description {
+    color: var(--cor-cinza-medio);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--raio-borda);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    max-width: 480px;
+}
+
+.feature-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cor-amarelo);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+}
+
+.feature-text {
+    color: var(--cor-cinza-medio);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--cor-branco);
+    font-weight: 500;
+}
+
+.benefit-icon {
+    font-size: 1.1rem;
+}
+
+.signup-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: var(--cor-branco);
+    overflow-y: auto;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.signup-header {
+    margin-bottom: 2rem;
+}
+
+.signup-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-preto);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.signup-header p {
+    color: var(--cor-cinza-texto);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form-message {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    padding: 0.875rem 1rem;
+    background-color: rgba(42, 157, 143, 0.1);
+    color: var(--cor-sucesso);
+    border: 1px solid rgba(42, 157, 143, 0.2);
+    border-radius: var(--raio-borda-sm);
+}
+
+.form-message.error {
+    display: block;
+    padding: 0.875rem 1rem;
+    background-color: rgba(230, 57, 70, 0.1);
+    color: var(--cor-erro);
+    border: 1px solid rgba(230, 57, 70, 0.2);
+    border-radius: var(--raio-borda-sm);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-preto);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--cor-cinza-borda);
+    border-radius: var(--raio-borda-sm);
+    font-size: 0.95rem;
+    background-color: var(--cor-cinza-claro);
+    transition: var(--transicao);
+}
+
+.form-group input:hover {
+    border-color: var(--cor-cinza-texto);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--cor-amarelo);
+    background-color: var(--cor-branco);
+    box-shadow: 0 0 0 4px rgba(255, 183, 3, 0.15);
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 3rem;
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: var(--transicao-rapida);
+}
+
+.toggle-password-btn:hover {
+    opacity: 1;
+}
+
+.eye-icon {
+    font-size: 1.1rem;
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.terms-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    color: var(--cor-cinza-escuro);
+    line-height: 1.4;
+}
+
+.terms-label input[type="checkbox"] {
+    width: 1.125rem;
+    height: 1.125rem;
+    accent-color: var(--cor-amarelo);
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
+.terms-label a {
+    color: var(--cor-vermelho);
+    font-weight: 600;
+    transition: var(--transicao-rapida);
+}
+
+.terms-label a:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.95rem;
+    background-color: var(--cor-amarelo);
+    color: var(--cor-preto);
+    font-weight: 700;
+    border-radius: var(--raio-borda-sm);
+    font-size: 1rem;
+    transition: var(--transicao);
+    box-shadow: var(--sombra-suave);
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+    background-color: var(--cor-amarelo-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--sombra-card);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.signup-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-cinza-texto);
+}
+
+.signup-footer a {
+    color: var(--cor-vermelho);
+    font-weight: 600;
+    transition: var(--transicao-rapida);
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 968px) {
+    .signup-container {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-left {
+        display: none;
+    }
+
+    .signup-right {
+        padding: 2rem 1.5rem;
+    }
+}
