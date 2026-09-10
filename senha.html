@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKGEFood - Recuperação de Senha</title>
+    <link rel="stylesheet" href="styles/styles/senha.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="recovery-container">
+        <section class="recovery-left">
+            <div class="brand-container">
+                <img src="img/logo.jpeg" alt="" class="brand-logo">
+                <h1 class="brand-slogan">Seu pedido,<br><span class="highlight">do seu jeito.</span></h1>
+                <p class="brand-description">No AKGEFood você encontra sabor, praticidade e recomendações personalizadas com a ajuda da Inteligência Artificial.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-header">
+                    <span class="feature-icon" aria-hidden="true">🤖</span>
+                    <h2>IA AKGEFood</h2>
+                </div>
+                <p class="feature-text">Encontre opções que combinam perfeitamente com você com a nossa inteligencia artifical.</p>
+                
+                <ul class="benefit-list">
+                    <li class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">🚀</span>
+                        <span>Entrega rápida e segura</span>
+                    </li>
+                    <li class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">✨</span>
+                        <span>Recomendações sob medida</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="recovery-right">
+            <div class="recovery-card">
+                <div class="recovery-header">
+                    <h2>Recupere sua senha</h2>
+                    <p>Digite seu e-mail ou telefone para receber as instruções de recuperação da sua conta.</p>
+                </div>
+
+                <div id="form-message" class="form-message" aria-live="polite"></div>
+
+                <form class="recovery-form">
+                    <div class="form-group">
+                        <label for="recovery-identifier">E-mail ou telefone</label>
+                        <input type="text" id="recovery-identifier" name="recovery-identifier" placeholder="seu@email.com ou telefone" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar instruções</button>
+                </form>
+
+                <div class="recovery-footer">
+                    <a href="index.html" class="back-to-login">Voltar para o login</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
