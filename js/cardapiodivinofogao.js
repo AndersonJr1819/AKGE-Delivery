@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cartState = {
         items: [],
-        deliveryFee: 5.99
+        deliveryFee: 6.99
     };
 
     const searchInput = document.querySelector('.search-box input');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuCards.forEach(card => {
         const itemId = card.getAttribute('data-id');
         const itemName = card.getAttribute('data-name');
-        const itemPrice = parseFloat(card.getAttribute('data-price'));
+        const itemPrice = parseFloat(card.getAttribute('data-price').replace(',', '.'));
         
         const addBtn = card.querySelector('.btn-add-cart');
         const qtyControl = card.querySelector('.quantity-control');
@@ -138,9 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', () => {
             if (cartState.items.length === 0) {
-                showModal('Sacola Vazia', 'Adicione pelo menos um item do Oakberry antes de finalizar o pedido.');
+                showModal('Sacola Vazia', 'Adicione pelo menos um item do Divino Fogão antes de finalizar o pedido.');
             } else {
-                showModal('Pedido Realizado!', 'Seu pedido foi enviado com sucesso para a cozinha do Oakberry. Bom apetite!');
+                showModal('Pedido Realizado!', 'Seu pedido foi enviado com sucesso para a cozinha do Divino Fogão. Bom apetite!');
             }
         });
     }
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatClearBtn.addEventListener('click', () => {
             chatMessages.innerHTML = `
                 <div class="ai-message bot">
-                    <p>Conversa limpa. Como posso ajudar com o cardápio do Oakberry?</p>
+                    <p>Conversa limpa. Como posso ajudar com o cardápio do Divino Fogão?</p>
                 </div>
             `;
         });
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             const botMsg = document.createElement('div');
             botMsg.className = 'ai-message bot';
-            botMsg.innerHTML = `<p>Entendi sua dúvida sobre "${text}". O Açaí Especial e o Creme de Cupuaçu são ótimas pedidas refrescantes por aqui!</p>`;
+            botMsg.innerHTML = `<p>Entendi sua dúvida sobre "${text}". O Prato Feito Tradicional e o Pudim de Leite Condensado são excelentes escolhas do Divino Fogão!</p>`;
             chatMessages.appendChild(botMsg);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }, 800);

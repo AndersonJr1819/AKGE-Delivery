@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') {
                 const query = searchInput.value.trim();
                 if (query !== '') {
-                    showCustomAlert(`Pesquisando por: "${query}" no Sushi Prime`);
+                    showCustomAlert(`Pesquisando por: "${query}" no Gendai`);
                 }
             }
         });
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const greetings = ['oi', 'olá', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'e aí', 'salve'];
         if (greetings.some(word => query === word || query.startsWith(word + ' '))) {
             return getRandomResponse([
-                "Olá! Seja muito bem-vindo ao Sushi Prime no AKGEFood. O que vai pedir hoje?",
+                "Olá! Seja muito bem-vindo ao Gendai no AKGEFood. O que vai pedir hoje?",
                 "Oi! Como posso ajudar você a escolher um combinado japonês agora?",
                 "Olá! Pronto para escolher algo saboroso? Me diga o que procura."
             ]);
@@ -261,12 +261,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const vagueHunger = ['fome', 'com fome', 'o que comer', 'me indica', 'indica', 'sugestão', 'sugestao', 'o que tem', 'quero comer', 'alguma coisa'];
         if (vagueHunger.some(word => query.includes(word)) && !query.includes('sushi') && !query.includes('combinado') && !query.includes('chá') && !query.includes('guioza') && !query.includes('mochi')) {
-            return "Claro! 😋 Aqui no Sushi Prime você pode pedir:<br>🍣 Combinado de Sushi<br>🥟 Guioza<br>🍵 Chá Gelado<br>🍡 Mochi";
+            return "Claro! 😋 Aqui no Gendai você pode pedir:<br>🍣 Combinado de Sushi<br>🥟 Guioza<br>🍵 Chá Gelado<br>🍡 Mochi";
         }
 
         if (query.includes('sushi') || query.includes('combinado') || query.includes('peça')) {
             return getRandomResponse([
-                "Que tal o Combinado de Sushi do Sushi Prime? É uma seleção especial de peças preparadas com ingredientes frescos por R$ 42,90. 🍣",
+                "Que tal o Combinado de Sushi do Gendai? É uma seleção especial de peças preparadas com ingredientes frescos por R$ 42,90. 🍣",
                 "Nosso Combinado de Sushi é incrível! Recomendo muito adicionar ao carrinho."
             ]);
         }
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (query.includes('cardápio') || query.includes('cardapio') || query.includes('prato')) {
-            return "O cardápio do Sushi Prime conta com o Combinado de Sushi (Principal), Chá Gelado (Bebida), Guioza (Acompanhamento) e Mochi (Sobremesa).";
+            return "O cardápio do Gendai conta com o Combinado de Sushi (Principal), Chá Gelado (Bebida), Guioza (Acompanhamento) e Mochi (Sobremesa).";
         }
 
         if (query.includes('carrinho')) {
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return getRandomResponse([
-            "Entendi! Posso ajudar você a encontrar itens no cardápio do Sushi Prime, tirar dúvidas sobre preços ou sobre o carrinho. O que prefere?",
+            "Entendi! Posso ajudar você a encontrar itens no cardápio do Gendai, tirar dúvidas sobre preços ou sobre o carrinho. O que prefere?",
             "Hmm, não tenho certeza se entendi perfeitamente. Quer que eu te indique nossos principais combinados ou sobremesas?"
         ]);
     }

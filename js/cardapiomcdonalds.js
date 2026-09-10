@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') {
                 const query = searchInput.value.trim();
                 if (query !== '') {
-                    showCustomAlert(`Pesquisando por: "${query}" no Burger House`);
+                    showCustomAlert(`Pesquisando por: "${query}" no MCdonald's`);
                 }
             }
         });
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const greetings = ['oi', 'olá', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'e aí', 'salve'];
         if (greetings.some(word => query === word || query.startsWith(word + ' '))) {
             return getRandomResponse([
-                "Olá! Seja muito bem-vindo ao Burger House no AKGEFood. O que manda hoje?",
+                "Olá! Seja muito bem-vindo ao MCdonald's no AKGEFood. O que manda hoje?",
                 "Oi! Como posso ajudar a saciar sua fome com nossos lanches agora?",
                 "Olá! Pronto para escolher algo delicioso? Me diga o que procura."
             ]);
@@ -261,12 +261,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const vagueHunger = ['fome', 'com fome', 'o que comer', 'me indica', 'indica', 'sugestão', 'sugestao', 'o que tem', 'quero comer', 'alguma coisa'];
         if (vagueHunger.some(word => query.includes(word)) && !query.includes('hambúrguer') && !query.includes('hamburguer') && !query.includes('pizza') && !query.includes('sushi') && !query.includes('doce') && !query.includes('bebida')) {
-            return "Claro! 😋 Aqui no Burger House você pode pedir:<br>🍔 Hambúrguer Artesanal<br>🍟 Batata Frita<br>🥤 Refrigerante<br>🍫 Brownie";
+            return "Claro! 😋 Aqui no  você pode pedir:<br>🍔 Hambúrguer Artesanal<br>🍟 Batata Frita<br>🥤 Refrigerante<br>🍫 Brownie";
         }
 
         if (query.includes('hambúrguer') || query.includes('hamburguer') || query.includes('lanche')) {
             return getRandomResponse([
-                "Que tal o Hambúrguer Artesanal do Burger House? É preparado com carne, queijo, molho especial e pão por R$ 24,90. 🍔",
+                "Que tal o Hambúrguer Artesanal do MCdonald's? É preparado com carne, queijo, molho especial e pão por R$ 24,90. 🍔",
                 "Nosso Hambúrguer Artesanal é imbatível! Recomendo muito adicionar ao carrinho."
             ]);
         }
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (query.includes('cardápio') || query.includes('cardapio') || query.includes('prato')) {
-            return "O cardápio do Burger House conta com o Hambúrguer Artesanal (Principal), Refrigerante (Bebida), Batata Frita (Acompanhamento) e Brownie (Sobremesa).";
+            return "O cardápio do MCdonald's conta com o Hambúrguer Artesanal (Principal), Refrigerante (Bebida), Batata Frita (Acompanhamento) e Brownie (Sobremesa).";
         }
 
         if (query.includes('carrinho')) {
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return getRandomResponse([
-            "Entendi! Posso ajudar você a encontrar itens no cardápio do Burger House, tirar dúvidas sobre preços ou sobre o carrinho. O que prefere?",
+            "Entendi! Posso ajudar você a encontrar itens no cardápio do MCdonald's, tirar dúvidas sobre preços ou sobre o carrinho. O que prefere?",
             "Hmm, não tenho certeza se entendi perfeitamente. Quer que eu te indique nossos principais lanches ou sobremesas?"
         ]);
     }

@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') {
                 const query = searchInput.value.trim();
                 if (query !== '') {
-                    showCustomAlert(`Pesquisando por: "${query}" na Pizzaria Top`);
+                    showCustomAlert(`Pesquisando por: "${query}" na Pizzaria POP`);
                 }
             }
         });
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const greetings = ['oi', 'olá', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'e aí', 'salve'];
         if (greetings.some(word => query === word || query.startsWith(word + ' '))) {
             return getRandomResponse([
-                "Olá! Seja muito bem-vindo à Pizzaria Top no AKGEFood. O que vai pedir hoje?",
+                "Olá! Seja muito bem-vindo à Pizzaria POP no AKGEFood. O que vai pedir hoje?",
                 "Oi! Como posso ajudar você a escolher uma pizza deliciosa agora?",
                 "Olá! Pronto para escolher algo saboroso? Me diga o que procura."
             ]);
@@ -261,12 +261,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const vagueHunger = ['fome', 'com fome', 'o que comer', 'me indica', 'indica', 'sugestão', 'sugestao', 'o que tem', 'quero comer', 'alguma coisa'];
         if (vagueHunger.some(word => query.includes(word)) && !query.includes('hambúrguer') && !query.includes('pizza') && !query.includes('pão') && !query.includes('refrigerante') && !query.includes('doce')) {
-            return "Claro! 😋 Aqui na Pizzaria Top você pode pedir:<br>🍕 Pizza Especial<br>🥖 Pão de Alho<br>🥤 Refrigerante<br>🍰 Petit Gâteau";
+            return "Claro! 😋 Aqui na Pizzaria POP você pode pedir:<br>🍕 Pizza Especial<br>🥖 Pão de Alho<br>🥤 Refrigerante<br>🍰 Petit Gâteau";
         }
 
         if (query.includes('pizza') || query.includes('massa')) {
             return getRandomResponse([
-                "Que tal a Pizza Especial da Pizzaria Top? É preparada com massa artesanal, queijo, molho de tomate e ingredientes selecionados por R$ 39,90. 🍕",
+                "Que tal a Pizza Especial da Pizzaria POP? É preparada com massa artesanal, queijo, molho de tomate e ingredientes selecionados por R$ 39,90. 🍕",
                 "Nossa Pizza Especial é imperdível! Recomendo muito adicionar ao carrinho."
             ]);
         }
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (query.includes('cardápio') || query.includes('cardapio') || query.includes('prato')) {
-            return "O cardápio da Pizzaria Top conta com a Pizza Especial (Principal), Refrigerante (Bebida), Pão de Alho (Acompanhamento) e Petit Gâteau (Sobremesa).";
+            return "O cardápio da Pizzaria POP conta com a Pizza Especial (Principal), Refrigerante (Bebida), Pão de Alho (Acompanhamento) e Petit Gâteau (Sobremesa).";
         }
 
         if (query.includes('carrinho')) {
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return getRandomResponse([
-            "Entendi! Posso ajudar você a encontrar itens no cardápio da Pizzaria Top, tirar dúvidas sobre preços ou sobre o carrinho. O que prefere?",
+            "Entendi! Posso ajudar você a encontrar itens no cardápio da Pizzaria POP, tirar dúvidas sobre preços ou sobre o carrinho. O que prefere?",
             "Hmm, não tenho certeza se entendi perfeitamente. Quer que eu te indique nossas principais pizzas ou sobremesas?"
         ]);
     }
