@@ -7,7 +7,8 @@
     <title>AKGEFood - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/styles/home.css">
-    <script src="script.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="js/ia.js"></script>
 </head>
 
 <body>
@@ -409,6 +410,49 @@
             </div>
         </div>
     </footer>
+
+    <div class="ai-chat-widget">
+        <button type="button" class="ai-chat-toggle-btn" aria-label="Abrir chat da IA AKGEFood">
+            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+            <span>IA AKGEFood</span>
+        </button>
+
+        <div class="ai-chat-window" aria-hidden="true">
+            <div class="ai-chat-header">
+                <div class="ai-chat-title-group">
+                    <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                    <div>
+                        <h3>IA AKGEFood</h3>
+                        <p>Seu assistente de delivery</p>
+                    </div>
+                </div>
+                <div class="ai-chat-header-actions">
+                    <button type="button" class="ai-chat-clear-btn" aria-label="Limpar conversa"
+                        title="Limpar conversa">
+                        <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="ai-chat-close-btn" aria-label="Fechar chat">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="ai-chat-messages">
+                <div class="ai-message bot">
+                    <p>Olá! 👋 Sou a IA AKGEFood. Posso ajudar você a encontrar restaurantes, pratos, ofertas ou
+                        recomendar algo de acordo com o seu gosto.</p>
+                </div>
+            </div>
+
+            <div class="ai-chat-input-area">
+                <input type="text" class="ai-chat-input" placeholder="Digite sua mensagem..."
+                    aria-label="Digite sua mensagem">
+                <button type="button" class="ai-chat-send-btn" aria-label="Enviar mensagem">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
