@@ -14,6 +14,36 @@ document.addEventListener('DOMContentLoaded', () => {
     let cartCount = 0;
     let cartTotal = 0;
 
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'akge-modal-overlay';
+    modalOverlay.innerHTML = `
+        <div class="akge-modal-box">
+            <h3 class="akge-modal-title">AKGEFood</h3>
+            <p class="akge-modal-text"></p>
+            <button class="akge-modal-btn">OK</button>
+        </div>
+    `;
+    document.body.appendChild(modalOverlay);
+
+    const modalTextElement = modalOverlay.querySelector('.akge-modal-text');
+    const modalButton = modalOverlay.querySelector('.akge-modal-btn');
+
+    function showCustomAlert(message) {
+        modalTextElement.textContent = message;
+        modalOverlay.classList.add('active');
+    }
+
+    function closeCustomAlert() {
+        modalOverlay.classList.remove('active');
+    }
+
+    modalButton.addEventListener('click', closeCustomAlert);
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeCustomAlert();
+        }
+    });
+
     function updateCartUI() {
         if (cartBadge) {
             cartBadge.textContent = cartCount;
@@ -46,10 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
         searchButton.addEventListener('click', () => {
             const locationValue = locationInput.value.trim();
             if (locationValue === '') {
-                alert('Por favor, digite seu endereço ou bairro para buscar restaurantes.');
+                showCustomAlert('Por favor, digite seu endereço ou bairro para buscar restaurantes.');
                 locationInput.focus();
             } else {
-                alert(`Buscando restaurantes disponíveis para: ${locationValue}`);
+                showCustomAlert(`Buscando restaurantes disponíveis para: ${locationValue}`);
             }
         });
     }
@@ -59,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') {
                 const query = searchInput.value.trim();
                 if (query !== '') {
-                    alert(`Pesquisando por: "${query}"`);
+                    showCustomAlert(`Pesquisando por: "${query}"`);
                 }
             }
         });
@@ -68,9 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cartButton) {
         cartButton.addEventListener('click', () => {
             if (cartCount === 0) {
-                alert('Seu carrinho está vazio no momento.');
+                showCustomAlert('Seu carrinho está vazio no momento.');
             } else {
-                alert(`Carrinho possui ${cartCount} item(ns). Total: R$ ${cartTotal.toFixed(2).replace('.', ',')}`);
+                showCustomAlert(`Carrinho possui ${cartCount} item(ns). Total: R$ ${cartTotal.toFixed(2).replace('.', ',')}`);
             }
         });
     }
@@ -85,21 +115,21 @@ document.addEventListener('DOMContentLoaded', () => {
             cartTotal += 35.00;
             updateCartUI();
             
-            alert(`Você acessou o cardápio de "${restaurantName}". Um item de demonstração (R$ 35,00) foi adicionado ao carrinho!`);
+            showCustomAlert(`Você acessou o cardápio de "${restaurantName}". Um item de demonstração (R$ 35,00) foi adicionado ao carrinho!`);
         });
     });
 
     if (trackingDetailBtn) {
         trackingDetailBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('Detalhes do Pedido #1024: Entregue com sucesso ao Burger House. Obrigado por pedir com o AKGEFood!');
+            showCustomAlert('Detalhes do Pedido #1024: Entregue com sucesso ao Burger House. Obrigado por pedir com o AKGEFood!');
         });
     }
 
     offerButtons.forEach((btn, index) => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert(`Oferta especial #${index + 1} selecionada! O desconto será aplicado na finalização.`);
+            showCustomAlert(`Oferta especial #${index + 1} selecionada! O desconto será aplicado na finalização.`);
         });
     });
 
@@ -111,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             badge.style.backgroundColor = 'var(--cor-preto)';
             badge.style.color = 'var(--cor-amarelo)';
             
-            alert(`Doação de ${badge.textContent} selecionada para a ONG parceira. Obrigado!`);
+            showCustomAlert(`Doação de ${badge.textContent} selecionada para a ONG parceira. Obrigado!`);
         });
     });
 });
