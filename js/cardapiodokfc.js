@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addItemButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const card = button.closest('.menu-item-card') || button.closest('.restaurant-card') || button.closest('div');
-            const id = card ? card.getAttribute('data-id') || 'item-geral' : 'item-geral';
-            const name = card ? card.getAttribute('data-name') || 'Produto AKGEFood' : 'Produto AKGEFood';
-            const price = card ? parseFloat(card.getAttribute('data-price') || '25.00') : 25.00;
+            const card = button.closest('.menu-item-card') || button.closest('div');
+            const id = card ? card.getAttribute('data-id') || 'item-kfc' : 'item-kfc';
+            const name = card ? card.getAttribute('data-name') || 'Produto KFC' : 'Produto KFC';
+            const price = card ? parseFloat(card.getAttribute('data-price') || '39.90') : 39.90;
             const quantityControl = card ? card.querySelector('.quantity-control') : null;
             const qtyValue = card ? card.querySelector('.qty-value') : null;
 
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const decreaseBtn = control.querySelector('.decrease');
         const increaseBtn = control.querySelector('.increase');
         const qtyValue = control.querySelector('.qty-value');
-        const card = control.closest('.menu-item-card') || control.closest('.restaurant-card');
+        const card = control.closest('.menu-item-card');
         const id = card ? card.getAttribute('data-id') : null;
         const addButton = card ? card.querySelector('.btn-add-cart') : null;
 
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') {
                 const query = searchInput.value.trim();
                 if (query !== '') {
-                    showCustomAlert(`Pesquisando por: "${query}" na AKGEFood`);
+                    showCustomAlert(`Pesquisando por: "${query}" no KFC`);
                 }
             }
         });
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const initialMessageHTML = `
         <div class="ai-message bot">
-            <p>Olá! 👋 Sou a IA AKGEFood. Posso ajudar você a encontrar restaurantes, pratos, ofertas ou recomendar algo de acordo com o seu gosto.</p>
+            <p>Olá! 👋 Sou a IA AKGEFood. Posso ajudar você a encontrar pratos, ofertas ou recomendar algo de acordo com o seu gosto no KFC.</p>
         </div>
     `;
 
@@ -240,11 +240,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!chatMessages) return;
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('ai-message', sender);
-
+        
         const p = document.createElement('p');
         p.innerHTML = text;
         messageDiv.appendChild(p);
-
+        
         chatMessages.appendChild(messageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -260,8 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const greetings = ['oi', 'olá', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'e aí', 'salve'];
         if (greetings.some(word => query === word || query.startsWith(word + ' '))) {
             return getRandomResponse([
-                "Olá! Seja muito bem-vindo ao AKGEFood. O que vamos pedir hoje?",
-                "Oi! Como posso ajudar você a encontrar um restaurante delicioso agora?",
+                "Olá! Seja muito bem-vindo ao KFC no AKGEFood. O que vai pedir hoje?",
+                "Oi! Como posso ajudar você a escolher um frango crocante agora?",
                 "Olá! Pronto para escolher algo saboroso? Me diga o que procura."
             ]);
         }
@@ -269,33 +269,53 @@ document.addEventListener('DOMContentLoaded', () => {
         const farewells = ['obrigado', 'obrigada', 'valeu', 'tchau', 'até mais', 'vlws', 'muito obrigado'];
         if (farewells.some(word => query.includes(word))) {
             return getRandomResponse([
-                "Por nada! Sempre à disposição. Bom apetite! 🍔",
+                "Por nada! Sempre à disposição. Bom apetite! 🍗",
                 "Imagina! Volte sempre que bater aquela fome. 🚀",
                 "Disponível sempre! Tenha uma excelente refeição."
             ]);
         }
 
-        const restaurantsList = ['burger house', 'pizzaria top', 'sushi prime', 'frango na brasa', 'açaí do vale', 'refresh drinks'];
-        if (restaurantsList.some(r => query.includes(r))) {
-            return "Excelente escolha! Você pode acessar o cardápio completo desse restaurante clicando diretamente no botão 'Ver cardápio' do estabelecimento.";
-        }
-
         const vagueHunger = ['fome', 'com fome', 'o que comer', 'me indica', 'indica', 'sugestão', 'sugestao', 'o que tem', 'quero comer', 'alguma coisa'];
-        if (vagueHunger.some(word => query.includes(word))) {
-            return "Claro! 😋 No AKGEFood temos ótimas opções: Burger House (Hambúrgueres), Pizzaria Top (Pizzas), Sushi Prime (Japonês), Frango na Brasa, Açaí do Vale e Refresh Drinks.";
+        if (vagueHunger.some(word => query.includes(word)) && !query.includes('balde') && !query.includes('frango') && !query.includes('refrigerante') && !query.includes('batata') && !query.includes('sorvete')) {
+            return "Claro! 😋 Aqui no KFC você pode pedir:<br>🍗 Balde de Frango Crocante<br>🥤 Refrigerante<br>🍟 Batata Frita<br>🍨 Sorvete";
         }
 
-        if (query.includes('cardápio') || query.includes('cardapio') || query.includes('restaurante')) {
-            return "Temos 6 restaurantes incríveis disponíveis na nossa plataforma. Escolha o seu favorito na seção de restaurantes e clique em 'Ver cardápio'.";
+        if (query.includes('balde') || query.includes('frango') || query.includes('crocante')) {
+            return getRandomResponse([
+                "Que tal o nosso famoso Balde de Frango Crocante? É uma porção generosa temperada e perfeita para compartilhar por R$ 39,90. 🍗",
+                "O Balde de Frango Crocante é o nosso carro-chefe! Recomendo muito adicionar ao carrinho."
+            ]);
+        }
+
+        if (query.includes('batata') || query.includes('acompanhamento')) {
+            return getRandomResponse([
+                "Para acompanhar seu frango crocante, temos batatas fritas super crocantes e douradas por R$ 10,00. 🍟"
+            ]);
+        }
+
+        if (query.includes('bebida') || query.includes('refrigerante') || query.includes('refri')) {
+            return getRandomResponse([
+                "Temos refrigerante bem gelado por R$ 6,00 para refrescar sua refeição. 🥤"
+            ]);
+        }
+
+        if (query.includes('doce') || query.includes('sobremesa') || query.includes('sorvete')) {
+            return getRandomResponse([
+                "Para finalizar com chave de ouro, temos um sorvete gelado e cremoso por R$ 9,00. 🍨"
+            ]);
+        }
+
+        if (query.includes('cardápio') || query.includes('cardapio') || query.includes('prato')) {
+            return "O cardápio do KFC conta com Balde de Frango Crocante (Principal), Refrigerante (Bebida), Batata Frita (Acompanhamento) e Sorvete (Sobremesa).";
         }
 
         if (query.includes('carrinho')) {
-            return "Você pode verificar os itens adicionados e o total do seu pedido clicando no ícone do carrinho no topo da página.";
+            return "Você pode verificar os itens adicionados e o total do seu pedido no painel do carrinho ao lado.";
         }
 
         return getRandomResponse([
-            "Entendi! Posso ajudar você a encontrar restaurantes, tirar dúvidas sobre pedidos ou orientar sobre a navegação. O que prefere?",
-            "Hmm, não tenho certeza se entendi perfeitamente. Quer que eu te indique nossos principais restaurantes recomendados?"
+            "Entendi! Posso ajudar você a encontrar itens no cardápio do KFC, tirar dúvidas sobre preços ou sobre o carrinho. O que prefere?",
+            "Hmm, não tenho certeza se entendi perfeitamente. Quer que eu te indique nosso famoso balde de frango ou as batatas fritas?"
         ]);
     }
 
